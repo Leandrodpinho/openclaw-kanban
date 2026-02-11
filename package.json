@@ -1,0 +1,15 @@
+{
+  "name": "openclaw-kanban",
+  "version": "1.0.0",
+  "description": "Simple Kanban Dashboard for OpenClaw Tasks",
+  "main": "api/index.js",
+  "scripts": {
+    "start": "node local-server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "body-parser": "^1.20.2",
+    "sqlite3": "^5.1.7"
+  }
+}

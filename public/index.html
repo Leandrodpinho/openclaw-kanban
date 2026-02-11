@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenClaw Kanban Moderno</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-body: #f4f7fc;
+      --bg-column: #ebecf0;
+      --text-primary: #172b4d;
+      --text-secondary: #5e6c84;
+      --card-bg: #ffffff;
+      --card-shadow: 0 1px 2px rgba(9, 30, 66, 0.25);
+      
+      /* Cores das Colunas */
+      --col-todo: #e6effc;
+      --col-todo-border: #b3d4ff;
+      --col-inprogress: #fff7d6;
+      --col-inprogress-border: #ffec99;
+      --col-done: #e3fcef;
+      --col-done-border: #abf5d1;
+      --col-canceled: #ffebe6;
+      --col-canceled-border: #ffbdad;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: var(--bg-body);
+      color: var(--text-primary);
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      font-weight: 700;
+      color: #0052cc;
+      margin: 0;
+    }
+
+    p.subtitle {
+      color: var(--text-secondary);
+      margin-top: 5px;
+    }
+
+    /* Form */
+    .form-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+
+    input[type="text"] {
+      padding: 12px 20px;
+      width: 300px;
+      border: 2px solid #dfe1e6;
+      border-radius: 8px;
+      font-size: 16px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    input[type="text"]:focus {
+      border-color: #0052cc;
+    }
+
+    button.add-btn {
+      padding: 12px 24px;
+      background-color: #0052cc;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    button.add-btn:hover {
+      background-color: #0747a6;
+    }
+
+    /* Board */
+    .board {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      overflow-x: auto;
+      padding-bottom: 20px;
+    }
+
+    .column {
+      flex: 1;
+      min-width: 280px;
+      background-color: var(--bg-column);
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      max-height: 80vh;
+    }
+
+    .column h3 {
+      margin: 0 0 16px 0;
+      padding-bottom: 12px;
+      border-bottom: 2px solid rgba(0,0,0,0.05);
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .count-badge {
+      background: rgba(0,0,0,0.1);
+      border-radius: 12px;
+      padding: 2px 8px;
+      font-size: 12px;
+    }
+
+    /* Estilo Específico por Coluna */
+    #todo { background-color: var(--col-todo); border-top: 4px solid #0052cc; }
+    #inprogress { background-color: var(--col-inprogress); border-top: 4px solid #ff991f; }
+    #done { background-color: var(--col-done); border-top: 4px solid #36b37e; }
+    #canceled { background-color: var(--col-canceled); border-top: 4px solid #ff5630; }
+
+    .task-list {
+      flex: 1;
+      overflow-y: auto;
+      min-height: 100px;
+    }
+
+    /* Cards */
+    .task {
+      background-color: var(--card-bg);
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+      border-left: 3px solid transparent;
+      position: relative;
+    }
+
+    .task:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .task p {
+      margin: 0 0 12px 0;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    .task-meta {
+      font-size: 11px;
+      color: var(--text-secondary);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Actions */
+    .actions {
+      display: flex;
+      gap: 6px;
+      margin-top: 10px;
+      border-top: 1px solid #eee;
+      padding-top: 10px;
+    }
+
+    .action-btn {
+      flex: 1;
+      padding: 6px;
+      border: none;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+
+    .action-btn:hover { opacity: 1; }
+
+    .btn-start { background-color: #fffae6; color: #ff991f; }
+    .btn-finish { background-color: #e3fcef; color: #36b37e; }
+    .btn-cancel { background-color: #ffebe6; color: #ff5630; }
+    .btn-delete { background-color: transparent; color: #999; margin-left: auto; width: auto; flex: 0;}
+    .btn-delete:hover { color: #ff5630; background: rgba(255,0,0,0.05); }
+
+    /* Responsivo */
+    @media (max-width: 800px) {
+      .board {
+        flex-direction: column;
+        overflow-x: hidden;
+      }
+      .column {
+        width: 100%;
+        min-width: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🚀 OpenClaw Task Board</h1>
+    <p class="subtitle">Gerencie suas tarefas com eficiência e zero tokens gastos.</p>
+  </header>
+
+  <div class="form-container">
+    <input type="text" id="newTaskInput" placeholder="✨ O que precisa ser feito?" onkeypress="handleEnter(event)">
+    <button class="add-btn" onclick="createTask()">Adicionar Tarefa</button>
+  </div>
+
+  <div class="board">
+    <!-- Coluna: A Fazer -->
+    <div class="column" id="todo">
+      <h3>
+        <span>📅 A Fazer</span>
+        <span class="count-badge" id="count-todo">0</span>
+      </h3>
+      <div class="task-list"></div>
+    </div>
+
+    <!-- Coluna: Em Andamento -->
+    <div class="column" id="inprogress">
+      <h3>
+        <span>🔥 Em Andamento</span>
+        <span class="count-badge" id="count-inprogress">0</span>
+      </h3>
+      <div class="task-list"></div>
+    </div>
+
+    <!-- Coluna: Feito -->
+    <div class="column" id="done">
+      <h3>
+        <span>✅ Feito</span>
+        <span class="count-badge" id="count-done">0</span>
+      </h3>
+      <div class="task-list"></div>
+    </div>
+
+    <!-- Coluna: Cancelado -->
+    <div class="column" id="canceled">
+      <h3>
+        <span>🚫 Cancelado</span>
+        <span class="count-badge" id="count-canceled">0</span>
+      </h3>
+      <div class="task-list"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
