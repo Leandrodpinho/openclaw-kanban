@@ -9,6 +9,30 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
+// Middleware for authorization
+app.use((req, res, next) => {
+    // Allow public access to GET (viewing) and OPTIONS (CORS preflight)
+    if (req.method === 'GET' || req.method === 'OPTIONS') {
+        return next();
+    }
+
+    const expectedSecret = process.env.KANBAN_SECRET;
+
+    // If no secret configured, allow access (open mode)
+    if (!expectedSecret) {
+        return next();
+    }
+
+    const authHeader = req.headers['authorization'];
+    
+    // Check for Bearer token match
+    if (!authHeader || authHeader !== `Bearer ${expectedSecret}`) {
+        return res.status(401).json({ error: "Unauthorized" });
+    }
+
+    next();
+});
+
 // Database Setup
 // Use :memory: for in-memory ephemeral database (Vercel will reset on cold start).
 // For production persistence on Vercel, connect to Vercel Postgres, KV, or Turso.
