@@ -42,7 +42,11 @@ app.use((req, res, next) => {
     next();
 });
 
-// API Routes
+// API Routes (Updated paths for Vercel auto-routing if needed, but Express handles the internal routing)
+// Since this file is now api/tasks.js, Vercel routes /api/tasks to it.
+// BUT Express usually expects to handle the routing inside. 
+// Vercel serverless functions receive (req, res).
+// We need to make sure the app handles the root path relative to the function.
 
 // GET all tasks
 app.get('/api/tasks', async (req, res) => {
@@ -60,8 +64,33 @@ app.get('/api/tasks', async (req, res) => {
   }
 });
 
+// Also handle root '/' because Vercel might strip the prefix
+app.get('/', async (req, res) => {
+    // Forward to the same logic
+    try {
+        const { data, error } = await supabase
+            .from('tasks')
+            .select('*')
+            .order('created_at', { ascending: false });
+        
+        if (error) throw error;
+        res.json({ tasks: data });
+      } catch (error) {
+        console.error("Supabase Error:", error);
+        res.status(500).json({ error: "Failed to fetch tasks" });
+      }
+});
+
+
 // CREATE a task
 app.post('/api/tasks', async (req, res) => {
+    await handleCreate(req, res);
+});
+app.post('/', async (req, res) => {
+    await handleCreate(req, res);
+});
+
+async function handleCreate(req, res) {
   const { title } = req.body;
   if (!title) {
     return res.status(400).json({ error: "Title is required" });
@@ -84,10 +113,20 @@ app.post('/api/tasks', async (req, res) => {
     console.error("Supabase Error:", error);
     res.status(500).json({ error: "Failed to save task" });
   }
+}
+
+// UPDATE task status (ID in path)
+// Note: Vercel file-based routing usually doesn't handle dynamic segments like /:id easily inside a single file unless configured.
+// But Express app export should handle it if rewrites are correct.
+app.put('/api/tasks/:id', async (req, res) => {
+    await handleUpdate(req, res);
+});
+// Handle local/relative path if rewritten
+app.put('/:id', async (req, res) => {
+    await handleUpdate(req, res);
 });
 
-// UPDATE task status
-app.put('/api/tasks/:id', async (req, res) => {
+async function handleUpdate(req, res) {
   const { status } = req.body;
   const { id } = req.params;
   
@@ -113,10 +152,17 @@ app.put('/api/tasks/:id', async (req, res) => {
     console.error("Supabase Error:", error);
     res.status(500).json({ error: "Failed to update task" });
   }
-});
+}
 
 // DELETE task
 app.delete('/api/tasks/:id', async (req, res) => {
+    await handleDelete(req, res);
+});
+app.delete('/:id', async (req, res) => {
+    await handleDelete(req, res);
+});
+
+async function handleDelete(req, res) {
     const { id } = req.params;
     try {
         const { error } = await supabase
@@ -130,6 +176,6 @@ app.delete('/api/tasks/:id', async (req, res) => {
         console.error("Supabase Error:", error);
         res.status(500).json({ error: "Failed to delete task" });
     }
-});
+}
 
 module.exports = app;
