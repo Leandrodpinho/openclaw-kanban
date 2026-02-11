@@ -1,8 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const sqlite3 = require('sqlite3').verbose();
-const path = require('path');
+const { kv } = require('@vercel/kv'); // Redis client from Vercel
 
 const app = express();
 
@@ -11,35 +10,25 @@ app.use(bodyParser.json());
 
 // Middleware for authorization
 app.use((req, res, next) => {
-    // Allow public access to GET (viewing) and OPTIONS (CORS preflight)
+    // Skip auth for static files (public) and OPTIONS requests (CORS)
     if (req.method === 'GET' || req.method === 'OPTIONS') {
         return next();
     }
 
+    const authHeader = req.headers['authorization'];
     const expectedSecret = process.env.KANBAN_SECRET;
 
-    // If no secret configured, allow access (open mode)
+    // If no secret configured, warn but allow (or deny if stricter policy desired)
     if (!expectedSecret) {
+        console.warn("WARNING: KANBAN_SECRET not set. API is open.");
         return next();
     }
 
-    const authHeader = req.headers['authorization'];
-    
-    // Check for Bearer token match
     if (!authHeader || authHeader !== `Bearer ${expectedSecret}`) {
         return res.status(401).json({ error: "Unauthorized" });
     }
 
     next();
-});
-
-// Database Setup
-// Use :memory: for in-memory ephemeral database (Vercel will reset on cold start).
-// For production persistence on Vercel, connect to Vercel Postgres, KV, or Turso.
-const db = new sqlite3.Database(':memory:'); 
-
-db.serialize(() => {
-  db.run("CREATE TABLE IF NOT EXISTS tasks (id TEXT PRIMARY KEY, title TEXT, status TEXT, created_at TEXT)");
 });
 
 // Helper for generating IDs
@@ -49,41 +38,53 @@ function generateId() {
 
 // API Routes
 
-// GET all tasks
-app.get('/api/tasks', (req, res) => {
-  db.all("SELECT * FROM tasks", [], (err, rows) => {
-    if (err) {
-      res.status(500).json({ error: err.message });
-      return;
+// GET all tasks (Fetch from Redis)
+app.get('/api/tasks', async (req, res) => {
+  try {
+    // Scan for keys starting with 'task:'
+    // Note: 'keys' is not recommended for production with millions of keys, but fine for a kanban.
+    const keys = await kv.keys('task:*');
+    
+    if (keys.length === 0) {
+      return res.json({ tasks: [] });
     }
-    res.json({ tasks: rows });
-  });
+    
+    // Fetch values for all keys
+    // mget requires arguments, not an array, but vercel/kv supports array if passed correctly or iterate.
+    // Let's iterate for safety or use mget with spread if keys is small.
+    // Safe approach: Promise.all
+    const tasks = await Promise.all(keys.map(key => kv.get(key)));
+    res.json({ tasks: tasks.filter(t => t) }); // Filter out nulls
+  } catch (error) {
+    console.error("Redis Error:", error);
+    res.status(500).json({ error: "Failed to fetch tasks" });
+  }
 });
 
-// CREATE a task
-app.post('/api/tasks', (req, res) => {
+// CREATE a task (Save to Redis)
+app.post('/api/tasks', async (req, res) => {
   const { title } = req.body;
   if (!title) {
     return res.status(400).json({ error: "Title is required" });
   }
   
   const id = generateId();
-  const status = 'todo'; // Changed from 'pending' to match UI
+  const status = 'todo';
   const created_at = new Date().toISOString();
+  
+  const task = { id, title, status, created_at };
 
-  db.run(`INSERT INTO tasks (id, title, status, created_at) VALUES (?, ?, ?, ?)`, 
-    [id, title, status, created_at], 
-    function(err) {
-      if (err) {
-        return res.status(500).json({ error: err.message });
-      }
-      res.json({ id, title, status, created_at });
-    }
-  );
+  try {
+    await kv.set(`task:${id}`, task);
+    res.json(task);
+  } catch (error) {
+    console.error("Redis Error:", error);
+    res.status(500).json({ error: "Failed to save task" });
+  }
 });
 
-// UPDATE task status
-app.put('/api/tasks/:id', (req, res) => {
+// UPDATE task status (Update Redis)
+app.put('/api/tasks/:id', async (req, res) => {
   const { status } = req.body;
   const { id } = req.params;
   
@@ -91,26 +92,35 @@ app.put('/api/tasks/:id', (req, res) => {
     return res.status(400).json({ error: "Status is required" });
   }
 
-  db.run(`UPDATE tasks SET status = ? WHERE id = ?`, [status, id], function(err) {
-    if (err) {
-      return res.status(500).json({ error: err.message });
-    }
-    if (this.changes === 0) {
+  try {
+    const task = await kv.get(`task:${id}`);
+    if (!task) {
       return res.status(404).json({ error: "Task not found" });
     }
+
+    task.status = status;
+    await kv.set(`task:${id}`, task);
+    
     res.json({ message: "Task updated", id, status });
-  });
+  } catch (error) {
+    console.error("Redis Error:", error);
+    res.status(500).json({ error: "Failed to update task" });
+  }
 });
 
-// DELETE task
-app.delete('/api/tasks/:id', (req, res) => {
+// DELETE task (Remove from Redis)
+app.delete('/api/tasks/:id', async (req, res) => {
     const { id } = req.params;
-    db.run(`DELETE FROM tasks WHERE id = ?`, [id], function(err) {
-        if (err) {
-            return res.status(500).json({ error: err.message });
+    try {
+        const deleted = await kv.del(`task:${id}`);
+        if (deleted === 0) {
+            return res.status(404).json({ error: "Task not found" });
         }
         res.json({ message: "Task deleted", id });
-    });
+    } catch (error) {
+        console.error("Redis Error:", error);
+        res.status(500).json({ error: "Failed to delete task" });
+    }
 });
 
 module.exports = app;
