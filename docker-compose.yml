@@ -15,6 +15,10 @@ services:
       - TZ=America/Sao_Paulo
       # ─── Webhook URL (para produção futura) ──────────
       - WEBHOOK_URL=http://localhost:5678/
+      # ─── Abacus.AI Integration ────────────────────────
+      - ABACUS_API_KEY=${ABACUS_API_KEY}
+      - ABACUS_DEPLOYMENT_TOKEN=${ABACUS_DEPLOYMENT_TOKEN}
+      - ABACUS_DEPLOYMENT_ID=${ABACUS_DEPLOYMENT_ID}
     volumes:
       - n8n_data:/home/node/.n8n
 
