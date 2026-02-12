@@ -1,4 +1,4 @@
-# 🚀 OpenClaw Kanban
+# 🚀 O. K. (Organização Kanban)
 
 Quadro Kanban premium para gerenciamento de tarefas, com dark mode, drag & drop, filtros, subtarefas e integração com n8n.
 

@@ -1,7 +1,7 @@
 {
-  "name": "openclaw-kanban",
+  "name": "ok-organizacao-kanban",
   "version": "1.0.0",
-  "description": "Simple Kanban Dashboard for OpenClaw Tasks",
+  "description": "O. K. (Organização Kanban)",
   "main": "api/index.js",
   "scripts": {
     "start": "node local-server.js"
