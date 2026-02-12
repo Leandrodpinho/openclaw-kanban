@@ -122,4 +122,9 @@ app.delete('/api/tasks/:id', async (req, res) => {
   }
 });
 
+// ─── Catch-all: redirect root/unknown GETs to frontend ──
+app.get('*', (req, res) => {
+  res.redirect('/index.html');
+});
+
 module.exports = app;
