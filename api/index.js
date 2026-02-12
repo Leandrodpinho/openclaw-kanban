@@ -9,11 +9,11 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // ─── Supabase Configuration ───────────────────────────
-const SUPABASE_URL = process.env.SUPABASE_URL;
+const SUPABASE_URL = process.env.SUPABASE_URL || process.env.URL_SUPABASE;
 const SUPABASE_KEY = process.env.SUPABASE_KEY;
 
 if (!SUPABASE_URL || !SUPABASE_KEY) {
-  console.error('⚠️  Missing SUPABASE_URL or SUPABASE_KEY environment variables.');
+  console.error('⚠️  Missing SUPABASE_URL (or URL_SUPABASE) or SUPABASE_KEY environment variables.');
   console.error('   Set them in Vercel Dashboard → Settings → Environment Variables.');
 }
 
@@ -23,7 +23,8 @@ const supabase = createClient(SUPABASE_URL || '', SUPABASE_KEY || '');
 app.use((req, res, next) => {
   if (req.method === 'GET' || req.method === 'OPTIONS') return next();
 
-  const expectedSecret = process.env.KANBAN_SECRET;
+  // Support both correct spelling (KANBAN) and common typo (KABAN)
+  const expectedSecret = process.env.KANBAN_SECRET || process.env.KABAN_SECRET;
   if (!expectedSecret) return next(); // open mode
 
   const authHeader = req.headers['authorization'];
@@ -84,7 +85,12 @@ app.get('/api/tasks', async (req, res) => {
     res.json({ tasks: data });
   } catch (error) {
     console.error('Supabase Error:', error);
-    res.status(500).json({ error: 'Failed to fetch tasks' });
+    res.status(500).json({
+      error: 'Failed to fetch tasks',
+      details: error.message,
+      hint: error.hint,
+      code: error.code
+    });
   }
 });
 
@@ -115,7 +121,12 @@ app.post('/api/tasks', async (req, res) => {
     res.json(data[0]);
   } catch (error) {
     console.error('Supabase Error:', error);
-    res.status(500).json({ error: 'Failed to save task' });
+    res.status(500).json({
+      error: 'Failed to save task',
+      details: error.message,
+      hint: error.hint,
+      code: error.code
+    });
   }
 });
 
@@ -171,7 +182,12 @@ app.put('/api/tasks/:id', async (req, res) => {
     res.json({ message: 'Task updated', task: data[0] });
   } catch (error) {
     console.error('Supabase Error:', error);
-    res.status(500).json({ error: 'Failed to update task' });
+    res.status(500).json({
+      error: 'Failed to update task',
+      details: error.message,
+      hint: error.hint,
+      code: error.code
+    });
   }
 });
 
