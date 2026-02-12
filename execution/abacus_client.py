@@ -57,8 +57,8 @@ def ask_ai(prompt, model=None, system_message=None):
         if isinstance(e, requests.exceptions.HTTPError) and e.response.status_code == 404:
             return (
                 "❌ Erro 404: Workflow não encontrado ou inativo.\n"
-                "👉 Verifique se o workflow 'Universal AI Gateway' está ATIVO no n8n:\n"
-                "   http://localhost:5678/workflow/qrSf6mjGyOjwK0WK"
+                "👉 Verifique se o workflow 'Universal AI Gateway v3' está ATIVO no n8n:\n"
+                "   http://localhost:5678/workflow/lIBayEmPDZeteNhe"
             )
         return f"Error connecting to AI Gateway: {str(e)}"
 
