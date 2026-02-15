@@ -1,17 +1,16 @@
 {
-  "name": "openclaw-kanban",
+  "name": "ok-organizacao-kanban",
   "version": "1.0.0",
-  "description": "Simple Kanban Dashboard for OpenClaw Tasks",
+  "description": "O. K. (Organização Kanban)",
   "main": "api/index.js",
   "scripts": {
     "start": "node local-server.js"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.95.3",
-    "@vercel/kv": "^3.0.0",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "sqlite3": "^5.1.7"
+    "sqlite3": "^5.0.2"
   }
 }
