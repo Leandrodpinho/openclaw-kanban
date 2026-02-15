@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caça-Palavras do Leo 🎱</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f0f2f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(15, 30px);
+            gap: 2px;
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            user-select: none;
+        }
+        .cell {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #eee;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .cell:hover {
+            background-color: #e3f2fd;
+        }
+        .cell.selected {
+            background-color: #2196f3;
+            color: white;
+        }
+        .cell.found {
+            background-color: #4caf50;
+            color: white;
+        }
+        .words {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            max-width: 500px;
+        }
+        .word-item {
+            background: #fff;
+            padding: 5px 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        .word-item.found {
+            text-decoration: line-through;
+            color: #888;
+            background: #e8f5e9;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Caça-Palavras do Leo 🎱</h1>
+    <div class="grid" id="grid"></div>
+    <div class="words" id="wordList"></div>
+
+    <script>
+        const words = [
+            "LIDERANCA", "RAPEL", "FLAMENGO", "PRODUTIVIDADE", 
+            "REFORMADA", "DISCIPLINA", "KANBAN", "FOCO", 
+            "CRUZEIRO", "GESTAO", "OITO", "ESTRATEGIA"
+        ];
+        const gridSize = 15;
+        let grid = [];
+        let selectedCells = [];
+
+        function initGame() {
+            const gridEl = document.getElementById('grid');
+            const wordListEl = document.getElementById('wordList');
+            
+            // Initialize empty grid
+            for(let i=0; i<gridSize; i++) {
+                grid[i] = [];
+                for(let j=0; j<gridSize; j++) {
+                    grid[i][j] = '';
+                }
+            }
+
+            // Place words
+            words.forEach(word => placeWord(word));
+
+            // Fill empty spaces
+            const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            for(let i=0; i<gridSize; i++) {
+                for(let j=0; j<gridSize; j++) {
+                    if(grid[i][j] === '') {
+                        grid[i][j] = letters.charAt(Math.floor(Math.random() * letters.length));
+                    }
+                    const cell = document.createElement('div');
+                    cell.className = 'cell';
+                    cell.innerText = grid[i][j];
+                    cell.dataset.row = i;
+                    cell.dataset.col = j;
+                    cell.onclick = () => selectCell(cell);
+                    gridEl.appendChild(cell);
+                }
+            }
+
+            // Render list
+            words.forEach(word => {
+                const div = document.createElement('div');
+                div.className = 'word-item';
+                div.id = 'word-' + word;
+                div.innerText = word;
+                wordListEl.appendChild(div);
+            });
+        }
+
+        function placeWord(word) {
+            let placed = false;
+            while(!placed) {
+                const direction = Math.random() > 0.5 ? 'H' : 'V';
+                const row = Math.floor(Math.random() * gridSize);
+                const col = Math.floor(Math.random() * gridSize);
+
+                if (canPlace(word, row, col, direction)) {
+                    for(let i=0; i<word.length; i++) {
+                        if (direction === 'H') grid[row][col+i] = word[i];
+                        else grid[row+i][col] = word[i];
+                    }
+                    placed = true;
+                }
+            }
+        }
+
+        function canPlace(word, row, col, direction) {
+            if (direction === 'H') {
+                if (col + word.length > gridSize) return false;
+                for(let i=0; i<word.length; i++) {
+                    if (grid[row][col+i] !== '' && grid[row][col+i] !== word[i]) return false;
+                }
+            } else {
+                if (row + word.length > gridSize) return false;
+                for(let i=0; i<word.length; i++) {
+                    if (grid[row+i][col] !== '' && grid[row+i][col] !== word[i]) return false;
+                }
+            }
+            return true;
+        }
+
+        function selectCell(cell) {
+            if (cell.classList.contains('found')) return;
+            
+            cell.classList.toggle('selected');
+            const row = parseInt(cell.dataset.row);
+            const col = parseInt(cell.dataset.col);
+            
+            const index = selectedCells.findIndex(c => c.row === row && c.col === col);
+            if (index > -1) selectedCells.splice(index, 1);
+            else selectedCells.push({row, col, el: cell, char: cell.innerText});
+
+            checkSelection();
+        }
+
+        function checkSelection() {
+            // Sort by position to form word
+            if (selectedCells.length < 2) return;
+
+            // Simple check: join letters
+            // Real implementation would check adjacency
+            const word = selectedCells.map(c => c.char).join('');
+            const reverse = word.split('').reverse().join('');
+
+            if (words.includes(word) || words.includes(reverse)) {
+                const foundWord = words.includes(word) ? word : reverse;
+                markFound(foundWord);
+            }
+        }
+
+        function markFound(word) {
+            selectedCells.forEach(c => {
+                c.el.classList.remove('selected');
+                c.el.classList.add('found');
+            });
+            document.getElementById('word-' + word).classList.add('found');
+            selectedCells = [];
+        }
+
+        initGame();
+    </script>
+</body>
+</html>
