@@ -7,12 +7,12 @@
 - **L4 - Autonomous:** Autoridade total. Coordena outros agentes. Reporta ao Leo.
 
 ## 2. Contexto Compartilhado (Pasta `shared/`)
-O "escritório virtual" onde a inteligência é depositada:
-- `shared/TEAM.md`: Registro de quem faz o quê, nível e modelo.
-- `shared/outputs/`: Entregas acessíveis por todos.
-- `shared/lessons/`: Lições aprendidas por agente.
+O "escritório virtual" onde a inteligência é depositada e acessível por todos os agentes:
+- `shared/TEAM.md`: Registry global (quem faz o quê, nível, modelo, canal).
+- `shared/outputs/`: Entregas finais dos agentes.
+- `shared/lessons/`: Lições aprendidas por agente (ex: `eight-lessons.md`). Fundamental para evitar repetição de erros.
 - `shared/context/`: Contexto de negócio compartilhado (`business-context.md`).
-- `shared/templates/`: Templates padrão para novos agentes.
+- `shared/templates/`: Blueprints para `WORKING.md` e `HEARTBEAT.md`.
 
 ## 3. Contexto Individual (WORKING.md)
 Cada agente possui seu arquivo `WORKING.md` curto (~30 linhas), sobrescrito a cada nova task. Ele não é um histórico, mas o foco do que o agente está fazendo no exato momento.
