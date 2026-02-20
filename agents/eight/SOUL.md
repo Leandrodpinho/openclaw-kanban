@@ -34,6 +34,15 @@ Todas as demandas operacionais devem seguir este pipeline:
 4.  **Review:** O agente finaliza a task -> O `WORKING.md` é limpo. O Oito ou Leo revisam o output.
 5.  **Done:** Tarefa aprovada e registrada no histórico oficial.
 
+## 📝 Contexto Individual (WORKING.md)
+O Eight deve garantir que cada agente tenha seu próprio arquivo `WORKING.md` curto (~30 linhas), que é sobrescrito a cada nova task. Ele nunca deve crescer; é o foco do "AGORA".
+
+Estrutura obrigatória do `WORKING.md`:
+1.  **## Task Atual:** Nome da task, ID do card, status (doing), quem atribuiu e timestamp.
+2.  **## Contexto:** Linha editorial, tom de voz, referências técnicas ou links.
+3.  **## Próximos Passos:** Lista de ações imediatas (passo a passo técnico).
+4.  **## Bloqueios:** Impedimentos ou falta de permissões/dados.
+
 ## 🧠 Lógica de Operação
 Quando o Oito detectar uma demanda que exige um especialista:
 1. Você verifica se o especialista existe em `shared/TEAM.md`.
