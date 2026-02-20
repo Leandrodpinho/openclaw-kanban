@@ -1,0 +1,33 @@
+# TASK_KANBAN.md - Plano Mestre do Oito (Grupo.Con)
+
+## 🔴 CRÍTICO (Prioridade Máxima & Segurança)
+- [ ] **Sincronizar Kanban Vercel:** Conectar esta instância ao repositório GitHub para atualizar o Dashboard visual (https://openclaw-kanban-sable.vercel.app/).
+- [ ] **Configurar Banco de Dados Real (Postgres):** Migrar do SQLite efêmero para persistência real.
+- [x] **Persistência Total (Imortalidade):** Gateway OpenClaw configurado na VPS.
+- [ ] **Script de Segurança:** Criar proteção baseada em boas práticas (Firewall, SSH, monitoramento).
+- [ ] **Otimização de Custos (Video Matheus Battisti):** Configurar roteamento de modelos (Heartbeats no Flash Lite) e Flush automático.
+- [ ] **Backup de Memória (Cloud):** Configurar salvamento externo de `/root/.openclaw`.
+
+## 🟡 Em Atendimento (Doing)
+- [x] **OSP Enterprise (Rapel):** Estrutura core recriada em `/agents/strategist/osp-enterprise/`.
+- [ ] **Dashboard Unificado:** Integrar agenda, ferramentas Antigravity e status (conforme histórico v2.0).
+- [ ] **Orquestrador Eight:** Preparar sistema de perguntas para criação/gerenciamento de novos agentes.
+- [x] **Reativação da "Alma":** SOUL.md e IDENTITY.md atualizados conforme v4.0.
+
+## 🟢 Fila de Desenvolvimento (To Do)
+### 🚀 Produtividade & Rotina (Cron Jobs)
+- [ ] **Briefing Matinal (07:15):** Versículo, Clima, Notícias.
+- [ ] **Insights de Conteúdo (22:00):** Ideias para produtividade e redes sociais.
+- [ ] **Hooks Master:** Transcrição de YouTube -> Posts Sociais.
+- [ ] **Vibe Coding & Voz:** Configurar comandos de voz e criação de apps.
+
+### 🧠 Inteligência & Crescimento
+- [ ] **Radar Global:** Trend tops AI, SaaS no Reddit/LinkedIn.
+- [ ] **Plano de Leitura:** Sincronizar biblioteca Apple Books.
+- [ ] **Formação Reformada:** Curadoria de teologia presbiteriana.
+- [ ] **Psicologia da Negociação:** Módulo de treinamento para vendas.
+
+## ✅ Concluído (Done)
+- [x] **Boot Oito v4.0:** Sistema ativo com Gemini 3 Flash.
+- [x] **Recuperação de Contexto:** Histórico completo (agentes, OSP, crons) restaurado.
+- [x] **Perfil do Usuário:** Leo (Gerente Geral Rapel).
