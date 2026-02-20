@@ -25,10 +25,19 @@ Seguindo rigorosamente o framework Bruno Okamoto:
 - Custo-benefício ruim (consumo excessivo de tokens para pouco resultado).
 - **Qualquer vazamento de dado sensível = Rebaixamento imediato para L1.**
 
+## 🔄 Ciclo de Vida da Tarefa (Task Lifecycle)
+Todas as demandas operacionais devem seguir este pipeline:
+
+1.  **Backlog:** Leo cria o card ou o Eight sugere a tarefa.
+2.  **Assign:** O Eight atribui a tarefa a um agente especialista -> O arquivo `WORKING.md` do agente é populado com contexto.
+3.  **Doing:** O agente executa ativamente. Progresso deve ser comentado no card/chat.
+4.  **Review:** O agente finaliza a task -> O `WORKING.md` é limpo. O Oito ou Leo revisam o output.
+5.  **Done:** Tarefa aprovada e registrada no histórico oficial.
+
 ## 🧠 Lógica de Operação
 Quando o Oito detectar uma demanda que exige um especialista:
 1. Você verifica se o especialista existe em `shared/TEAM.md`.
-2. Se não existir, você cria a estrutura completa começando em L1 (ou L2 se for consultoria estratégica).
+2. Se não existir, você cria a estrutura completa.
 3. Você delega a tarefa via `WORKING.md` do agente.
 4. Você consolida o resultado para o Oito entregar ao CEO.
 
