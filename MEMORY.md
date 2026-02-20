@@ -2,6 +2,7 @@
 
 ## 📂 Arquivos de Tópicos (A Verdade Curada)
 - **[[memory/topics/projects.md]]**: Rapel, Kanban, Leitura.
+- **[[memory/library.md]]**: Biblioteca 2026 (Livros e PDFs).
 - **[[memory/topics/people.md]]**: Família, Equipe, Donos.
 - **[[memory/topics/conceito_ccp.md]]**: Equilíbrio P/CP (Produção vs. Capacidade).
 - **[[memory/topics/decisions.md]]**: Stack VPS, Autonomia v4.0.

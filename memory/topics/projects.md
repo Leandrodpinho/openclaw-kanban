@@ -5,10 +5,10 @@
 - **Missão:** Organizar 7 unidades e estruturar processos.
 
 ## Metas Pessoais
-- **Leitura:** 20 livros (Livro atual: "12 dias para atualizar sua vida" - Tiago Brunet).
+- **Leitura:** 20 livros (Livro atual: "Os 7 Hábitos das Pessoas Altamente Eficazes").
 - **Idiomas:** Duolingo (20 min/dia).
-- **Saúde:** Meta 90kg + Musculação ABCDE.
+- **Saúde:** Meta 90kg + Treino Funcional em Casa.
 
-## Grupo.Con / Oito Kanban
+## Oito Kanban
 - Reativação de Crons (Briefing, Radar, Rotina Noturna).
 - Persistência de Dados (Postgres).

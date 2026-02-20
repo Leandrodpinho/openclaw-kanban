@@ -26,11 +26,11 @@
 
 ## 4. Saúde & Alta Performance
 - **Físico:** 90kg. Meta: Perder gordura abdominal.
-- **Treino:** Musculação (ABCDE) + Aeróbico diário.
+- **Treino:** Funcional em casa + Aeróbico diário.
 - **Mental:** Foco no controle de ansiedade e raiva. **Sobriedade inegociável** (vício em jogos/Aviator eliminado).
 
 ## 5. Metas & Aprendizado
-- **Leitura:** 20 livros em 2026 (Áudio + Texto).
+- **Leitura:** 20 livros em 2026 (Foco atual: Os 7 Hábitos das Pessoas Altamente Eficazes).
 - **Idiomas:** Duolingo (20min/dia).
 - **Interesses:** AI Trends, Automação (n8n, Docker, APIs), Conteúdo Teológico.
 
