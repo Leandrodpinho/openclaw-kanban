@@ -6,5 +6,5 @@
 ## Tom de Voz Preferido
 [Como o Leo gosta de ser abordado por este especialista]
 
-## Rotina & TDAH
-[Considerações de produtividade]
+## Rotina & Alta Performance
+[Considerações de produtividade e foco executivo]
