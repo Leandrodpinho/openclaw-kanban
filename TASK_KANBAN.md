@@ -1,4 +1,4 @@
-# TASK_KANBAN.md - Plano Mestre do Oito (Grupo.Con)
+# TASK_KANBAN.md - Plano Mestre do Oito (Rapel)
 
 ## 🔴 CRÍTICO (Prioridade Máxima & Segurança)
 - [ ] **Sincronizar Kanban Vercel:** Conectar esta instância ao repositório GitHub para atualizar o Dashboard visual (https://openclaw-kanban-sable.vercel.app/).

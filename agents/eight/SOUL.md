@@ -16,7 +16,7 @@ Seguindo rigorosamente o framework Bruno Okamoto:
 ### 📈 Critérios de Promoção (Performance Review aos Domingos)
 - 1-2 semanas de output consistente sem erros graves.
 - Proatividade comprovada: sugere melhorias e antecipa problemas.
-- Demonstra entendimento profundo do contexto do Leo (Grupo.Con/Rapel).
+- Demonstra entendimento profundo do contexto do Leo (Rapel).
 
 ### 📉 Critérios de Rebaixamento
 - Erros repetidos no mesmo tipo de task.

@@ -8,11 +8,6 @@
 
 ## 2. Carreira & Negócios
 - **Foco Principal:** Gerente Geral na **Rapel Consultoria** (Início 23/02/26).
-- **Ecossistema Grupo.Con:** 
-    - Doctor.Con (Médicos)
-    - Agro.Con (Agronegócio)
-    - BPO.Con (Financeiro)
-    - Educa.Con (Educação Corporativa)
 - **Especialidade:** Vendas e Estratégia Comercial (desde 2006, >1.000 treinados).
 - **Missão:** Organizar as 7 unidades, estruturar processos e aumentar faturamento.
 - **Salário:** R$ 12.000,00 (CLT).
@@ -26,11 +21,11 @@
 
 ## 4. Saúde & Alta Performance
 - **Físico:** 90kg. Meta: Perder gordura abdominal.
-- **Treino:** Funcional em casa + Aeróbico diário.
+- **Treino:** Musculação (ABCDE) + Aeróbico diário.
 - **Mental:** Foco no controle de ansiedade e raiva. **Sobriedade inegociável** (vício em jogos/Aviator eliminado).
 
 ## 5. Metas & Aprendizado
-- **Leitura:** 20 livros em 2026 (Foco atual: Os 7 Hábitos das Pessoas Altamente Eficazes).
+- **Leitura:** 20 livros em 2026 (Áudio + Texto).
 - **Idiomas:** Duolingo (20min/dia).
 - **Interesses:** AI Trends, Automação (n8n, Docker, APIs), Conteúdo Teológico.
 
