@@ -10,7 +10,7 @@
 O "escritório virtual" onde a inteligência é depositada e acessível por todos os agentes:
 - `shared/TEAM.md`: Registry global (quem faz o quê, nível, modelo, canal).
 - `shared/outputs/`: Entregas finais dos agentes.
-- `shared/lessons/`: Lições aprendidas por agente (ex: `eight-lessons.md`). Fundamental para evitar repetição de erros.
+- `shared/lessons/`: Lições aprendidas por agente. Fundamental para evitar repetição de erros.
 - `shared/context/`: Contexto de negócio compartilhado (`business-context.md`).
 - `shared/templates/`: Blueprints para `WORKING.md` e `HEARTBEAT.md`.
 
@@ -25,35 +25,24 @@ Cada agente possui seu arquivo `WORKING.md` curto (~30 linhas), sobrescrito a ca
 
 ## 4. Os 7 Arquivos Sagrados (Por Agente)
 Todo agente deve ter estes arquivos em seu workspace:
-1.  **IDENTITY.md:** Nome, emoji, background.
-2.  **SOUL.md:** Personalidade, tom, valores, hierarquia.
-3.  **AGENTS.md:** Regras operacionais e checklist de sessão.
-4.  **USER.md:** Quem é o Leo, tom de voz, rotina.
-5.  **TOOLS.md:** Integrações e credenciais.
-6.  **MEMORY.md:** Índice de memória e topic files.
-7.  **WORKING.md:** Foco atual do agente.
+1. IDENTITY.md | 2. SOUL.md | 3. AGENTS.md | 4. USER.md | 5. TOOLS.md | 6. MEMORY.md | 7. WORKING.md
 
-## 5. Performance Review (Domingos)
-Avaliação semanal baseada em:
-- **Quality Score:** Output e consistência.
-- **Velocidade:** Entrega no prazo.
-- **Proatividade:** Sugestões e insights.
-- **Aderência:** Respeito aos guardrails e nível.
-- **Custo-Benefício:** Tokens gastos vs. Valor entregue.
+## 5. As 10 Regras Invioláveis
+Embedadas no DNA do Orquestrador e seguidas por todos os agentes:
 
-**Decisões:** ⬆️ Promover | ➡️ Manter | ⬇️ Rebaixar | ❌ Desativar
+1.  **Texto > Cérebro:** Se importa, escreve no arquivo. "Mental notes" morrem no restart.
+2.  **Todo agente começa L1:** Sem exceções. Confiança se conquista, não se assume.
+3.  **SOUL.md define quem o agente É:** Sem alma, é só um chatbot. Personalidade, tom e valores.
+4.  **Nunca hardcodar credenciais:** Tudo via integradores/tools seguros (ex: `TOOLS.md`). Sem exceções.
+5.  **Dado privado não vaza:** Nunca em grupos, nunca em contextos compartilhados, nunca sem permissão.
+6.  **Um agente com 8 skills > 8 agentes:** Só cria agente novo quando skill não resolve.
+7.  **shared/TEAM.md é obrigatório:** Todo agente lê na sessão. É o org chart vivo.
+8.  **Resultado volta como comentário no card:** Não fica perdido em chat. Mission Control é a source of truth.
+9.  **Lição aprendida -> shared/lessons/:** Erro que não vira lição vai se repetir.
+10. **Se travou, bloqueia e comenta:** Mover card para "blocked" + explicar o motivo. Nunca ficar parado em silêncio.
 
-## 6. As 10 Regras Invioláveis
-1. Texto > Cérebro.
-2. Todo agente começa L1.
-3. SOUL.md define quem o agente É.
-4. Nunca hardcodar credenciais.
-5. Dado privado não vaza.
-6. Um agente com 8 skills > 8 agentes.
-7. shared/TEAM.md é obrigatório.
-8. Resultado volta como comentário no card.
-9. Lição aprendida -> shared/lessons/.
-10. Se travou, bloqueia e comenta.
+## 6. Performance Review (Domingos)
+Avaliação semanal baseada em Quality Score, Velocidade, Proatividade e Custo-Benefício.
 
 ## 7. Estratégia de Economia de Tokens (Anti-Ban)
 1. Model Routing (Heartbeats no Flash Lite).
