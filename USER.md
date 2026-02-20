@@ -1,34 +1,33 @@
-# USER.md - Dossiê Leandro Pinho (Definitivo)
+# USER.md - Dossiê Leandro Pinho (Definitivo v4.1)
 
 ## 1. Identidade & Valores
 - **Nome:** Leandro André Pereira de Pinho (Leo)
-- **Fé:** Cristão Presbiteriano Reformado. Prática, disciplina e constância.
+- **Fé:** Cristão Presbiteriano Reformado. Prática, disciplina e constância. Produz mensagens diárias de encorajamento espiritual.
 - **Família:** Pai (Bella), Esposa (Camila).
-- **Estilo:** Baterista, Flamenguista, Estética visual premium, "Power User".
+- **Interesses:** Baterista, Flamenguista e Cruzeirense. Valoriza estética visual premium e autoridade.
 
 ## 2. Carreira & Negócios
 - **Foco Principal:** Gerente Geral na **Rapel Consultoria** (Início 23/02/26).
-- **Especialidade:** Vendas e Estratégia Comercial (desde 2006, >1.000 treinados).
 - **Missão:** Organizar as 7 unidades, estruturar processos e aumentar faturamento.
-- **Salário:** R$ 12.000,00 (CLT).
+- **Áreas de Domínio:** Vendas (especialista desde 2006, >1.000 treinados), Estratégia Comercial, Financeiro e Tributário.
+- **Desenvolvimento Profissional:** Foco total em dominar **SST (Segurança e Saúde do Trabalho)** e **Medicina do Trabalho**.
+- **Crescimento Digital:** Produção de conteúdo bíblico diário (vídeos de até 1 min) e LinkedIn (foco em alcance/autoridade).
 
-## 3. Finanças (Reconstrução)
-- **Metas 2026:** 
-  1. Quitar dívidas e limpar o nome.
-  2. Gestão financeira rigorosa do salário de R$ 12k.
-  3. Processo Casas Bahia (~R$ 300k esperados).
-- **Estratégia:** Oito como Gestor Financeiro Pessoal.
+## 3. Finanças & Jurídico
+- **Metas 2026:** Quitar dívidas e gestão rigorosa do salário (R$ 12k).
+- **Processo Judicial:** Casas Bahia (Nº 0011605-85.2024.5.03.0100). Fase: homologação de liquidação e intimação para pagamento. Expectativa de ~R$ 300k.
 
 ## 4. Saúde & Alta Performance
 - **Físico:** 90kg. Meta: Perder gordura abdominal.
-- **Treino:** Musculação (ABCDE) + Aeróbico diário.
-- **Mental:** Foco no controle de ansiedade e raiva. **Sobriedade inegociável** (vício em jogos/Aviator eliminado).
+- **Treino:** Musculação (Seg: Perna | Ter: Peito/Tríceps | Qua: Costas/Bíceps | Qui: Perna | Sex: Ombro/Braço) + Aeróbico diário.
+- **Mental:** Foco no controle de ansiedade e raiva. Sobriedade inegociável (jogos eliminados). Aplicação de princípios do "Clube das 5 da Manhã".
 
-## 5. Metas & Aprendizado
-- **Leitura:** 20 livros em 2026 (Áudio + Texto).
+## 5. Ferramentas & Metas de Estudo
+- **Tecnologia:** Power User (MacBook + iPhone 13). Interesses em Automação, IA Trends, n8n, Docker e APIs.
+- **Leitura:** 20 livros em 2026 (Foco atual: 7 Hábitos e Tiago Brunet).
 - **Idiomas:** Duolingo (20min/dia).
-- **Interesses:** AI Trends, Automação (n8n, Docker, APIs), Conteúdo Teológico.
+- **Concursos:** Meta futura para concursos federais (PF/PRF).
 
 ## 6. Preferências de Interação
 - **Oito:** Parceiro estratégico, Gestor Financeiro e Guardião da Rotina.
-- **Tom:** Direto, motivador, sem formalidades.
+- **Tom:** Direto, resiliente, intenso e motivador.
