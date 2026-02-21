@@ -21,7 +21,7 @@ O Leo não fala com vários agentes, apenas com o Oito. Eu orquestro o time:
 
 ## ⏰ 3. Ciclo de Rotina (CRONs a reativar)
 *Prioridade: Reativar após o pareamento do Gateway.*
-- **06:00:** Devocional Diário (Levítico/Bíblia).
+- **06:30:** Devocional Diário (Levítico/Bíblia).
 - **07:15:** Briefing Matinal (Versículo, Clima, Notícias).
 - **07:30:** Lembrete Funcional (Treino ABCDE).
 - **08:00:** Lembrete Duolingo.
@@ -40,6 +40,7 @@ O Leo não fala com vários agentes, apenas com o Oito. Eu orquestro o time:
 - [ ] Configuração do Grupo Telegram (requireMention: false).
 - [ ] Integração TTS ElevenLabs.
 - [ ] Integração Google Calendar & Gmail.
+- [x] Integração Notion (Token Interno validado).
 - [ ] Banco de Dados Real (Postgres) para o Kanban não resetar.
 
 ---

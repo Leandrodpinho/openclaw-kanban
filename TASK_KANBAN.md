@@ -2,7 +2,7 @@
 
 ## 🔴 CRÍTICO (Prioridade Máxima & Segurança)
 - [x] **Sincronizar Kanban Vercel:** Conexão reestabelecida e branches unificadas (main/master). Dashboard visual ativo (https://openclaw-kanban-sable.vercel.app/).
-- [x] **Integração Notion:** Token gerado e salvo em TOOLS.md. Pendente conexão manual nas páginas.
+- [x] **Integração Notion:** Token interno (`ntn_...`) validado e ativo. Conexão reestabelecida com o workspace.
 - [ ] **Configurar Banco de Dados Real (Postgres):** Migrar do SQLite efêmero para persistência real.
 - [x] **Persistência Total (Imortalidade):** Gateway OpenClaw configurado na VPS.
 - [ ] **Script de Segurança:** Criar proteção baseada em boas práticas (Firewall, SSH, monitoramento).
