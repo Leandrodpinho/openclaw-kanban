@@ -1,6 +1,7 @@
 # MEMORY.md - Índice Mestre
 
 ## 📂 Arquivos de Tópicos (A Verdade Curada)
+- **[[memory/topics/proposta_rapel.md]]**: Proposta de Gestão Aceita (Termo de Referência).
 - **[[memory/topics/projects.md]]**: Rapel, Kanban, Leitura.
 - **[[memory/library.md]]**: Biblioteca 2026 (Livros e PDFs).
 - **[[memory/topics/people.md]]**: Família, Equipe, Donos.
