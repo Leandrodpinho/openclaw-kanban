@@ -2,6 +2,7 @@
 
 ## 🔴 CRÍTICO (Prioridade Máxima & Segurança)
 - [x] **Sincronizar Kanban Vercel:** Conexão reestabelecida e branches unificadas (main/master). Dashboard visual ativo (https://openclaw-kanban-sable.vercel.app/).
+- [x] **Integração Notion:** Token gerado e salvo em TOOLS.md. Pendente conexão manual nas páginas.
 - [ ] **Configurar Banco de Dados Real (Postgres):** Migrar do SQLite efêmero para persistência real.
 - [x] **Persistência Total (Imortalidade):** Gateway OpenClaw configurado na VPS.
 - [ ] **Script de Segurança:** Criar proteção baseada em boas práticas (Firewall, SSH, monitoramento).
@@ -10,6 +11,7 @@
 
 ## 🟡 Em Atendimento (Doing)
 - [x] **Preparação Rapel:** Todos os agentes (Strategist, SafeGuard, Money) calibrados com a Proposta de Gestão e conceito P/CP.
+- [ ] **Integração Google:** Configurar Calendar e Gmail para Briefing Matinal automático.
 - [ ] **Dashboard Unificado:** Integrar agenda, ferramentas Antigravity e status (conforme histórico v2.0).
 - [ ] **Orquestrador Eight:** Preparar sistema de perguntas para criação/gerenciamento de novos agentes.
 - [x] **Reativação da "Alma":** SOUL.md e IDENTITY.md atualizados conforme v4.0.
