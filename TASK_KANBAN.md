@@ -1,7 +1,7 @@
 # TASK_KANBAN.md - Plano Mestre do Oito (Rapel)
 
 ## 🔴 CRÍTICO (Prioridade Máxima & Segurança)
-- [ ] **Sincronizar Kanban Vercel:** Conectar esta instância ao repositório GitHub para atualizar o Dashboard visual (https://openclaw-kanban-sable.vercel.app/).
+- [x] **Sincronizar Kanban Vercel:** Conexão reestabelecida e branches unificadas (main/master). Dashboard visual ativo (https://openclaw-kanban-sable.vercel.app/).
 - [ ] **Configurar Banco de Dados Real (Postgres):** Migrar do SQLite efêmero para persistência real.
 - [x] **Persistência Total (Imortalidade):** Gateway OpenClaw configurado na VPS.
 - [ ] **Script de Segurança:** Criar proteção baseada em boas práticas (Firewall, SSH, monitoramento).
