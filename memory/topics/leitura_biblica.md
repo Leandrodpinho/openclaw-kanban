@@ -1,8 +1,25 @@
 # Leitura Bíblica Cronológica — A História da Salvação em 1 Ano
 
-## Plano
-Leitura cronológica da Bíblia em 1 ano, seguindo a ordem da história da redenção.
-Fonte: "A História da Salvação — a Bíblia Cronológica em 1 Ano" (Primeira Igreja Batista de Curitiba, Campus Portão)
+## Meta: Ler a Bíblia inteira em ordem cronológica em 2026.
+
+## Início: 01/01/2026
+
+## Propósito:
+- Entender a narrativa da salvação de forma contínua.
+- Aprofundar o conhecimento teológico e histórico.
+- Fortalecer a fé e a disciplina espiritual.
+
+## Estrutura:
+- Leitura diária de trechos do Antigo e Novo Testamento, organizados cronologicamente.
+- Foco na interconexão dos eventos e profecias.
+
+## Ferramentas de Apoio:
+- Aplicativo YouVersion (Plano "A Bíblia em Ordem Cronológica").
+- Comentários bíblicos e recursos de estudo para aprofundamento.
+
+## Progresso:
+- Acompanhamento diário do progresso.
+- Reflexões e anotações sobre os principais aprendizados.
 
 ## Status Atual (referência: 11/02/2026)
 - Dia 42 de 365 — Em dia!

@@ -6,11 +6,12 @@
 |---------|----------|
 | projects.md | 4 projetos principais do Leo (Rapel, Contabilidade, Financeiro, Intelectual) |
 | decisions.md | Decisões estratégicas registradas |
-| sst_medicina.md | Base técnica SST: NRs, documentos obrigatórios, eS| playbook_prompts.md | Playbooks táticos por modo |
+| sst_medicina.md | Base técnica SST: NRs, documentos obrigatórios, eSocial |
+| playbook_prompts.md | Playbooks por modo (Strategist, SafeGuard, Money) |
 | cron_schedule.md | Cronograma oficial de proatividade diária |
 | clube_do_livro.md | Biblioteca 2026 (22 livros), progresso, categorias |
 | conceito_ccp.md | Conceito P/CP (Produção / Capacidade de Produção) dos 7 Hábitos |
-| leitura_biblica.md | Plano de leitura cronológica da Bíblia (História da Salvação) |Strategist, SafeGuard, Money) |
+| leitura_biblica.md | Plano de leitura cronológica da Bíblia (História da Salvação) |
 
 ## Biblioteca (memory/library.md)
 Livros, cursos e referências de estudo do Leo.
