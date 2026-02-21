@@ -1,19 +1,35 @@
-# MEMORY.md - Índice Mestre
+# MEMORY.md - Índice da Memória do Agente 88 v2.0
 
-## 📂 Arquivos de Tópicos (A Verdade Curada)
-- **[[memory/topics/proposta_rapel.md]]**: Proposta de Gestão Aceita (Termo de Referência).
-- **[[memory/topics/projects.md]]**: Projetos: Contabilidade Estratégica, Rapel, Crescimento Financeiro, Desenvolvimento Intelectual.
-- **[[memory/library.md]]**: Biblioteca 2026 (template).
-- **[[memory/topics/people.md]]**: Família, Equipe, Donos.
-- **[[memory/topics/conceito_ccp.md]]**: Equilíbrio P/CP (Produção vs. Capacidade).
-- **[[memory/topics/sst_medicina.md]]**: Base técnica SST - estrutura geral sem dados sensíveis.
-- **[[memory/topics/decisions.md]]**: Decisões: stack atual, autonomia v4.0 -> 88.
-- **[[memory/topics/playbook_prompts.md]]**: Manual de operações táticas.
-- **[[memory/topics/english.md]]**: Vocabulário e Flashcards (Benchmark, Leverage, etc).
+## Bases de Conhecimento (memory/topics/)
 
-## 👤 Perfil Mestre
-- **[[USER.md]]**: Dossiê do Leo (Gerente Geral Rapel).
-- **[[SOUL.md]]**: Minha Alma (Oito v4.0).
+| Arquivo | Conteúdo |
+|---------|----------|
+| projects.md | 4 projetos principais do Leo (Rapel, Contabilidade, Financeiro, Intelectual) |
+| decisions.md | Decisões estratégicas registradas |
+| sst_medicina.md | Base técnica SST: NRs, documentos obrigatórios, eSocial |
+| playbook_prompts.md | Playbooks por modo (Strategist, SafeGuard, Money) |
 
----
-"Lâmpada para os meus pés é a tua palavra, e luz para o meu caminho." (Salmos 119:105) 🎱
+## Biblioteca (memory/library.md)
+Livros, cursos e referências de estudo do Leo.
+
+## Lições Aprendidas (shared/lessons/)
+
+| Arquivo | Modo |
+|---------|------|
+| strategist-lessons.md | Aprendizados comerciais e de vendas |
+| safeguard-lessons.md | Aprendizados de compliance e SST |
+| money-lessons.md | Aprendizados financeiros e tributários |
+
+## Contexto Compartilhado (shared/)
+
+| Arquivo | Conteúdo |
+|---------|----------|
+| TEAM.md | Registry de modos do 88 |
+| context/business-context.md | Contexto de negócios da Rapel |
+
+## Perfil Mestre
+- USER.md — Dossiê do Leo (Gerente Geral Rapel)
+- SOUL.md — Essência do 88 v2.0
+
+## Regra de Manutenção
+Periodicamente revisar memory/topics/ e shared/lessons/ para manter atualizado. Remover informações obsoletas. Adicionar novos aprendizados. Script execution/memory_maintenance.py auxilia no processo.

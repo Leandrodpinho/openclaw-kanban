@@ -1,36 +1,32 @@
-# TASK_KANBAN.md - Plano Mestre do Oito (Rapel)
+# TASK_KANBAN.md - Kanban de Tarefas da Rapel Consultoria
 
-## 🔴 CRÍTICO (Prioridade Máxima & Segurança)
-- [x] **Sincronizar Kanban Vercel:** Conexão reestabelecida e branches unificadas (main/master). Dashboard visual ativo (https://openclaw-kanban-sable.vercel.app/).
-- [x] **Integração Notion:** Token interno (`ntn_...`) validado e ativo. Conexão reestabelecida com o workspace.
-- [ ] **Configurar Banco de Dados Real (Postgres):** Migrar do SQLite efêmero para persistência real.
-- [x] **Persistência Total (Imortalidade):** Gateway OpenClaw configurado na VPS.
-- [ ] **Script de Segurança:** Criar proteção baseada em boas práticas (Firewall, SSH, monitoramento).
-- [ ] **Otimização de Custos (Video Matheus Battisti):** Configurar roteamento de modelos (Heartbeats no Flash Lite) e Flush automático.
-- [ ] **Backup de Memória (Cloud):** Configurar salvamento externo de `/root/.openclaw`.
+## CRÍTICO (Primeira Semana — 24/02 a 28/02)
+- [ ] **Diagnóstico Comercial Rapel:** Mapear carteira de clientes, segmentos, porte, tipo de contrato. Visão 360° do negócio.
+- [ ] **Mapeamento de Receita por Serviço:** Identificar faturamento por linha (PCMSO, PGR, LTCAT, PPP, ASO, treinamentos NR). Encontrar onde está o dinheiro.
+- [ ] **Análise de Concorrência SST (MG):** Levantar concorrentes diretos, precificação, diferenciais. Posicionar a Rapel.
 
-## 🟡 Em Atendimento (Doing)
-- [x] **Preparação Rapel:** Todos os agentes (Strategist, SafeGuard, Money) calibrados com a Proposta de Gestão e conceito P/CP.
-- [ ] **Integração Google:** Configurar Calendar e Gmail para Briefing Matinal automático.
-- [ ] **Dashboard Unificado:** Integrar agenda, ferramentas Antigravity e status (conforme histórico v2.0).
-- [ ] **Orquestrador Eight:** Preparar sistema de perguntas para criação/gerenciamento de novos agentes.
-- [x] **Reativação da "Alma":** SOUL.md e IDENTITY.md atualizados conforme v4.0.
+## EM ATENDIMENTO (Doing)
+- [ ] **Estruturar Funil de Vendas B2B:** Definir etapas (prospecção > qualificação > proposta > negociação > fechamento), métricas por etapa, ferramentas.
+- [ ] **Proposta de Valor Diferenciada:** Criar posicionamento "gestão estratégica de SST" vs. "compliance básico". Conceito P/CP aplicado.
+- [ ] **Roteiro de Abordagem Comercial:** Script para prospecção ativa, objeções comuns, argumentação de valor.
 
-## 🟢 Fila de Desenvolvimento (To Do)
-### 🚀 Produtividade & Rotina (Cron Jobs)
-- [ ] **Briefing Matinal (07:15):** Versículo, Clima, Notícias. (removido do escopo - n8n)
-- [ ] **Insights de Conteúdo (22:00):** Ideias para produtividade e redes sociais. (removido do escopo - n8n)
-- [ ] **Hooks Master:** Transcrição de YouTube -> Posts Sociais. (removido do escopo - n8n)
-- [ ] **Vibe Coding & Voz:** Configurar comandos de voz e criação de apps.
+## FILA (To Do — Semanas 2-4)
+### Modo Money
+- [ ] **Simulação Tributária para Clientes Médicos:** Comparativo Simples vs Presumido vs Real com Fator R.
+- [ ] **Plano de Crescimento Financeiro:** Metas de receita mensal, cenários conservador/moderado/agressivo.
+- [ ] **Estratégia de Precificação:** Análise de margem por serviço, precificação baseada em valor.
 
-### 🧠 Inteligência & Crescimento
-- [ ] **Radar Global:** Trend tops AI, SaaS no Reddit/LinkedIn.
-- [ ] **Plano de Leitura:** Sincronizar biblioteca Apple Books.
-- [ ] **Formação Reformada:** Curadoria de teologia presbiteriana.
-- [ ] **Psicologia da Negociação:** Módulo de treinamento para vendas.
+### Modo SafeGuard
+- [ ] **Checklist de Compliance SST:** Auditoria interna dos documentos obrigatórios por cliente.
+- [ ] **Mapa de NRs por Segmento:** Quais NRs se aplicam a cada tipo de cliente (indústria, saúde, construção, etc.).
+- [ ] **Protocolo eSocial SST:** Fluxo de envio dos eventos S-2210, S-2220, S-2240.
 
-## ✅ Concluído (Done)
-- [x] **Boot Oito v4.0:** Sistema ativo com Gemini 3 Flash.
-- [x] **Recuperação de Contexto:** Histórico completo (agentes, OSP, crons) restaurado.
-- [x] **Perfil do Usuário:** Leo (Gerente Geral Rapel).
-- [x] **OSP Enterprise (Rapel):** Estrutura core recriada em `/agents/strategist/osp-enterprise/`.
+### Modo Strategist
+- [ ] **Dashboard Comercial:** Indicadores de vendas, pipeline, taxa de conversão, ticket médio.
+- [ ] **Plano de Expansão:** Novos segmentos, novas regiões, parcerias estratégicas.
+- [ ] **Programa de Fidelização:** Estratégia de retenção e upsell na base atual.
+
+## CONCLUÍDO (Done)
+- [x] **Boot 88 v2.0:** Sistema ativo com multi-modo (Strategist, SafeGuard, Money, Devocional, Content).
+- [x] **Estrutura Completa:** 7 Arquivos Sagrados + shared/ + memory/ + execution/ implementados.
+- [x] **Backup GitHub + Notion:** Repositório e workspace sincronizados.

@@ -1,42 +1,27 @@
-# Sistema de Heartbeats
+# HEARTBEAT.md - Verificações de Status do 88 v2.0
 
-Este documento descreve a configuração e o funcionamento do sistema de heartbeats para o agente 88.
+## Verificações Periódicas (Rapel)
 
-## 1. Objetivo
+### Diário
+- [ ] Tarefas vencidas ou próximas do prazo no Kanban
+- [ ] Status das entregas da semana
+- [ ] Alertas de compliance SST pendentes
 
-Monitorar proativamente o status do sistema, o andamento das tarefas e fornecer resumos diários para garantir a operação contínua e eficiente do agente.
+### Semanal
+- [ ] Revisão do pipeline comercial
+- [ ] Atualização de MEMORY.md com lições da semana
+- [ ] Status financeiro (metas vs realizado)
 
-## 2. Verificações Periódicas
+### Quinzenal
+- [ ] Performance Review do 88
+- [ ] Revisão de shared/lessons/ por modo
+- [ ] Atualização do TASK_KANBAN.md
 
-As seguintes verificações serão realizadas em intervalos regulares:
+## Implementação
+O script execution/heartbeat.py orquestra as verificações usando a API do Kanban. Saídas registradas internamente para auditoria.
 
-### 2.1. Checagem de Tarefas Vencidas
-
-*   **Frequência:** Diariamente, às 07:00 AM (GMT-3).
-*   **Descrição:** Verifica todas as tarefas no Kanban que estão vencidas ou que vencem no dia atual.
-*   **Ferramenta:** `execution/heartbeat.py` (utilizando a API do Kanban).
-*   **Ação:** Gerar um relatório das tarefas identificadas.
-
-### 2.2. Status do Sistema
-
-*   **Frequência:** A cada 4 horas.
-*   **Descrição:** Verifica a saúde geral dos componentes críticos do sistema (e.g., API do Kanban, serviços externos).
-*   **Ferramenta:** `execution/heartbeat.py` (integrando com `health_check.py`).
-*   **Ação:** Registrar o status em um log interno.
-
-### 2.3. Resumo Diário
-
-*   **Frequência:** Diariamente, às 22:00 PM (GMT-3).
-*   **Descrição:** Compila um resumo das atividades do dia, tarefas concluídas, pendências e quaisquer alertas do sistema.
-*   **Ferramenta:** `execution/heartbeat.py`.
-*   **Ação:** Gerar um resumo consolidado.
-
-## 3. Implementação
-
-O script `execution/heartbeat.py` será o responsável por orquestrar essas verificações, utilizando a API do Kanban para acessar os dados das tarefas. As saídas das verificações serão registradas internamente e poderão ser consultadas para auditoria e acompanhamento.
-
-## 4. Próximos Passos (Futuras Integrações)
-
-*   Integração com e-mail para envio de relatórios diários.
-*   Integração com calendário para agendamento de tarefas de acompanhamento.
-*   Integração com plataformas de comunicação (e.g., Discord, Slack) para menções e alertas.
+## Regras
+- Horário de silêncio: 23h–7h (exceto urgências)
+- Não enviar mensagens sem conteúdo útil
+- Batching: combinar verificações na mesma sessão pra economizar tokens
+- Se nada precisa de atenção: HEARTBEAT_OK

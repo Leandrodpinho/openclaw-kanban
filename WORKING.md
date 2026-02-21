@@ -1,18 +1,21 @@
-# WORKING.md (Template)
+# WORKING.md - Tarefa Atual do 88
 
-## ## Task Atual
-- **Card:** [Nome da Task]
-- **Card ID:** [ID]
+## Card: Diagnóstico Comercial Rapel — Primeira Semana
 - **Status:** doing
-- **Atribuído por:** Eight
-- **Desde:** [Data/Hora]
+- **Atribuído por:** Leo
+- **Desde:** 2026-02-24
 
-## ## Contexto
-[Linha editorial, tom de voz, referências técnicas]
+## Contexto
+Leo começa segunda-feira (24/02) como Gerente Geral da Rapel Consultoria. Precisa de visão 360° do negócio para tomar decisões estratégicas desde o primeiro dia. Foco em SST e Medicina do Trabalho.
 
-## ## Próximos Passos
-1. [ ] Passo 1
-2. [ ] Passo 2
+## Próximos Passos
+1. Mapear carteira de clientes atuais (segmentos, porte, contratos)
+2. Analisar receita por serviço (PCMSO, PGR, LTCAT, treinamentos, ASOs)
+3. Identificar gaps comerciais e oportunidades de cross-sell
+4. Levantar concorrência SST na região de MG
+5. Propor quick wins para primeiros 30 dias
+6. Estruturar funil de vendas B2B
+7. Definir proposta de valor diferenciada
 
-## ## Bloqueios
-Nenhum.
+## Bloqueios
+Nenhum no momento. Aguardando dados reais da operação a partir de segunda.

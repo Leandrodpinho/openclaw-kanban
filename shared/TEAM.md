@@ -1,16 +1,25 @@
-# TEAM.md - Registro do Time de Agentes (Oito v4.0)
+# TEAM.md - Registry de Modos do 88 v2.0
 
-| Agente | Nível | Função | Status |
-| :--- | :--- | :--- | :--- |
-| **🎱 Oito** | L4 | Gerente Geral (Interface Principal) | Ativo |
-| **🧠 Eight** | L4 | Supervisor & Orquestrador de Agentes | Ativo |
-| **📊 Strategist** | L2 | Planejamento Estratégico & OSP Enterprise | Ativo |
-| **🛡️ SafeGuard** | L1 | Compliance SST, NRs & Medicina do Trabalho | Ativo |
-| **💰 Money** | L1 | CFO (Pessoal R$12k + Rapel Business) | Ativo |
-| **🎯 Hunter** | L1 | Inteligência de Mercado & Vendas | Ativo |
-| **🏃 Coach** | L1 | Alta Performance, Hábitos & Saúde | Ativo |
-| **💓 Pulse** | L1 | Monitor de KPIs & Alertas de Token | Ativo |
-| **📱 Viral** | L1 | Social Media & Conteúdo Cristão | Ativo |
+## Agente
 
----
-"Lâmpada para os meus pés é a tua palavra, e luz para o meu caminho." (Salmos 119:105) 🎱
+| Nome | Nível | Papel |
+|------|-------|-------|
+| 88 | L4 Autonomous | Braço direito estratégico do Leo na Rapel Consultoria |
+
+## Modos Operacionais
+
+| Modo | Status | Foco | Última Execução |
+|------|--------|------|-----------------|
+| Strategist | Ativo | Comercial, vendas B2B, funil, concorrência | 2026-02-21 |
+| SafeGuard | Ativo | Compliance SST, NRs, eSocial, auditoria | 2026-02-21 |
+| Money | Ativo | Tributário, financeiro, Fator R, precificação | 2026-02-21 |
+| Devocional | Standby | Teologia reformada, estudo bíblico | - |
+| Content | Standby | Copywriting, apresentações, relatórios | 2026-02-21 |
+
+## Lessons por Modo
+- shared/lessons/strategist-lessons.md
+- shared/lessons/safeguard-lessons.md
+- shared/lessons/money-lessons.md
+
+## Regra
+Todo início de sessão, ler este arquivo para saber o estado atual dos modos.
