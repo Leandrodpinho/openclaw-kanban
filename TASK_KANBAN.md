@@ -9,7 +9,7 @@
 - [ ] **Backup de Memória (Cloud):** Configurar salvamento externo de `/root/.openclaw`.
 
 ## 🟡 Em Atendimento (Doing)
-- [x] **OSP Enterprise (Rapel):** Estrutura core recriada em `/agents/strategist/osp-enterprise/`.
+- [x] **Preparação Rapel:** Todos os agentes (Strategist, SafeGuard, Money) calibrados com a Proposta de Gestão e conceito P/CP.
 - [ ] **Dashboard Unificado:** Integrar agenda, ferramentas Antigravity e status (conforme histórico v2.0).
 - [ ] **Orquestrador Eight:** Preparar sistema de perguntas para criação/gerenciamento de novos agentes.
 - [x] **Reativação da "Alma":** SOUL.md e IDENTITY.md atualizados conforme v4.0.
@@ -31,3 +31,4 @@
 - [x] **Boot Oito v4.0:** Sistema ativo com Gemini 3 Flash.
 - [x] **Recuperação de Contexto:** Histórico completo (agentes, OSP, crons) restaurado.
 - [x] **Perfil do Usuário:** Leo (Gerente Geral Rapel).
+- [x] **OSP Enterprise (Rapel):** Estrutura core recriada em `/agents/strategist/osp-enterprise/`.
