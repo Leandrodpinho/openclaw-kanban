@@ -99,12 +99,12 @@ O servidor MCP já está instalado e configurado. Para usar via Antigravity:
 curl -X POST https://seu-dominio.vercel.app/api/tasks \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer SEU_SECRET" \
-  -d '{
+  -d \'{
     "title": "Devocional Matinal",
     "priority": "high",
     "category": "devocional",
     "due_date": "2026-02-13"
-  }'
+  }\
 ```
 
 ## 🤖 Exemplo: Listar Tarefas

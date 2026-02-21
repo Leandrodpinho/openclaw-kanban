@@ -2,13 +2,13 @@
 
 ## 📂 Arquivos de Tópicos (A Verdade Curada)
 - **[[memory/topics/proposta_rapel.md]]**: Proposta de Gestão Aceita (Termo de Referência).
-- **[[memory/topics/projects.md]]**: Rapel, Kanban, Leitura.
-- **[[memory/library.md]]**: Biblioteca 2026 (Livros e PDFs).
+- **[[memory/topics/projects.md]]**: Projetos: Contabilidade Estratégica, Rapel, Crescimento Financeiro, Desenvolvimento Intelectual.
+- **[[memory/library.md]]**: Biblioteca 2026 (template).
 - **[[memory/topics/people.md]]**: Família, Equipe, Donos.
 - **[[memory/topics/conceito_ccp.md]]**: Equilíbrio P/CP (Produção vs. Capacidade).
-- **[[memory/topics/sst_medicina.md]]**: Base técnica SST e Medicina do Trabalho.
-- **[[memory/topics/decisions.md]]**: Stack VPS, Autonomia v4.0.
-- **[[memory/topics/playbook_prompts.md]]**: Manual de Operações Táticas.
+- **[[memory/topics/sst_medicina.md]]**: Base técnica SST - estrutura geral sem dados sensíveis.
+- **[[memory/topics/decisions.md]]**: Decisões: stack atual, autonomia v4.0 -> 88.
+- **[[memory/topics/playbook_prompts.md]]**: Manual de operações táticas.
 - **[[memory/topics/english.md]]**: Vocabulário e Flashcards (Benchmark, Leverage, etc).
 
 ## 👤 Perfil Mestre

@@ -364,141 +364,6 @@
       min-height: 100px;
       transition: background var(--transition);
     }
-
-    .task-list.drag-over {
-      background: rgba(0, 82, 204, 0.06);
-      border-radius: 0 0 var(--radius) var(--radius);
-    }
-
-    [data-theme="dark"] .task-list.drag-over {
-      background: rgba(76, 154, 255, 0.08);
-    }
-
-    /* ─── Cards ─────────────────────────────────────────── */
-    .task-card {
-      background: var(--bg-card);
-      border-radius: var(--radius-sm);
-      padding: 14px 16px;
-      margin-bottom: 10px;
-      box-shadow: var(--shadow-card);
-      transition: all var(--transition);
-      cursor: grab;
-      border-left: 4px solid transparent;
-      position: relative;
-    }
-
-    .task-card:hover {
-      box-shadow: var(--shadow-card-hover);
-      transform: translateY(-2px);
-    }
-
-    .task-card.dragging {
-      opacity: 0.5;
-      transform: rotate(3deg);
-      box-shadow: var(--shadow-drag);
-    }
-
-    .task-card.priority-high {
-      border-left-color: var(--priority-high);
-    }
-
-    .task-card.priority-medium {
-      border-left-color: var(--priority-medium);
-    }
-
-    .task-card.priority-low {
-      border-left-color: var(--priority-low);
-    }
-
-    .card-top {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 8px;
-      margin-bottom: 8px;
-    }
-
-    .card-title {
-      font-weight: 600;
-      font-size: 14px;
-      line-height: 1.4;
-      flex: 1;
-      cursor: pointer;
-      word-break: break-word;
-    }
-
-    .card-title:hover {
-      color: var(--accent);
-    }
-
-    .card-delete {
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-size: 14px;
-      opacity: 0;
-      transition: all var(--transition);
-      padding: 2px 4px;
-      border-radius: 4px;
-      color: var(--text-muted);
-    }
-
-    .task-card:hover .card-delete {
-      opacity: 1;
-    }
-
-    .card-delete:hover {
-      background: rgba(255, 86, 48, 0.1);
-      color: var(--priority-high);
-    }
-
-    /* Tags row */
-    .card-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 8px;
-    }
-
-    .tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      padding: 2px 8px;
-      border-radius: 50px;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.3px;
-    }
-
-    .tag-priority-high {
-      background: rgba(255, 86, 48, 0.12);
-      color: var(--priority-high);
-    }
-
-    .tag-priority-medium {
-      background: rgba(255, 153, 31, 0.12);
-      color: var(--priority-medium);
-    }
-
-    .tag-priority-low {
-      background: rgba(54, 179, 126, 0.12);
-      color: var(--priority-low);
-    }
-
-    .tag-cat-rapel {
-      background: rgba(0, 82, 204, 0.1);
-      color: var(--cat-rapel);
-    }
-
-    .tag-cat-estudo {
-      background: rgba(54, 179, 126, 0.1);
-      color: var(--cat-estudo);
-    }
-
-    .tag-cat-devocional {
-      background: rgba(212, 160, 23, 0.1);
-      color: var(--cat-devocional);
     }
 
     .tag-cat-lazer {
@@ -895,9 +760,6 @@
       font-size: 14px;
       cursor: pointer;
       font-family: inherit;
-      transition: all var(--transition);
-    }
-
     .btn-modal-cancel:hover {
       border-color: var(--text-secondary);
     }
@@ -1045,7 +907,7 @@
   <!-- Add Task Form -->
   <div class="form-container">
     <input type="text" id="newTaskInput" placeholder="✨ O que precisa ser feito?"
-      onkeypress="if(event.key==='Enter')createTask()">
+      onkeypress="if(event.key===\'Enter\')createTask()">
     <select id="newPriority">
       <option value="medium">🟡 Média</option>
       <option value="high">🔴 Alta</option>
@@ -1140,6 +1002,16 @@
           <div>
             <label>Data de Vencimento</label>
             <input type="date" id="editDueDate">
+
+            <label>Subtarefas</label>
+            <div class="subtask-list" id="editSubtaskList"></div>
+            <div class="subtask-add">
+              <input type="text" id="newSubtaskInput" placeholder="Adicionar nova subtarefa...">
+              <button onclick="addSubtask()">Adicionar</button>
+            </div>
+
+            <label>Histórico de Atividades</label>
+            <div class="activity-list" id="activityLog"></div>
           </div>
           <div>
             <label>Status</label>
@@ -1157,7 +1029,7 @@
         <div class="subtask-list" id="subtaskList"></div>
         <div class="subtask-add">
           <input type="text" id="newSubtaskInput" placeholder="Nova subtarefa..."
-            onkeypress="if(event.key==='Enter')addSubtask()">
+            onkeypress="if(event.key===\'Enter\')addSubtask()">
           <button onclick="addSubtask()">+ Add</button>
         </div>
 

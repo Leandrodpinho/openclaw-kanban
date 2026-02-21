@@ -73,7 +73,7 @@ Para proteger operações de escrita (POST/PUT/DELETE):
 1. Defina `KANBAN_SECRET` nas variáveis de ambiente
 2. No navegador, abra o console e execute:
    ```javascript
-   localStorage.setItem('KANBAN_SECRET', 'seu-token-aqui');
+   localStorage.setItem(\'KANBAN_SECRET\', \'seu-token-aqui\');
    ```
 
 ## 📡 API Endpoints

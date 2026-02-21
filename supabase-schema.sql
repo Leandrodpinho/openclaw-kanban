@@ -10,13 +10,13 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 CREATE TABLE IF NOT EXISTS tasks (
   id          UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
   title       TEXT NOT NULL,
-  description TEXT DEFAULT '',
-  status      TEXT NOT NULL DEFAULT 'todo'
-                CHECK (status IN ('todo', 'inprogress', 'done', 'canceled')),
-  priority    TEXT DEFAULT 'medium'
-                CHECK (priority IN ('high', 'medium', 'low')),
-  category    TEXT DEFAULT ''
-                CHECK (category IN ('', 'rapel', 'estudo', 'devocional', 'lazer', 'seguranca')),
+  description TEXT DEFAULT "";
+  status      TEXT NOT NULL DEFAULT "todo"
+                CHECK (status IN ("todo", "inprogress", "done", "canceled")),
+  priority    TEXT DEFAULT "medium"
+                CHECK (priority IN ("high", "medium", "low")),
+  category    TEXT DEFAULT ""
+                CHECK (category IN ("", "rapel", "estudo", "devocional", "lazer", "seguranca")),
   due_date    TIMESTAMPTZ,
   position    INTEGER DEFAULT 0,
   created_at  TIMESTAMPTZ NOT NULL DEFAULT NOW(),

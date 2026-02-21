@@ -19,7 +19,7 @@
 
 ## 4. Saúde & Alta Performance
 - **Físico:** 90kg. Meta: Perder gordura abdominal.
-- **Treino:** Musculação (Seg: Perna | Ter: Peito/Tríceps | Qua: Costas/Bíceps | Qui: Perna | Sex: Ombro/Braço) + Aeróbico diário.
+- **Treino:** Musculação (Seg: Perna | Ter: Peito/Tríceps | Qua: Costas/Bíceps | Sex: Ombro/Braço) + Aeróbico diário.
 - **Mental:** Foco no controle de ansiedade e raiva. Sobriedade inegociável (jogos eliminados). Aplicação de princípios do "Clube das 5 da Manhã".
 
 ## 5. Ferramentas & Metas de Estudo

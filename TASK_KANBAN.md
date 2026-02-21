@@ -18,9 +18,9 @@
 
 ## 🟢 Fila de Desenvolvimento (To Do)
 ### 🚀 Produtividade & Rotina (Cron Jobs)
-- [ ] **Briefing Matinal (07:15):** Versículo, Clima, Notícias.
-- [ ] **Insights de Conteúdo (22:00):** Ideias para produtividade e redes sociais.
-- [ ] **Hooks Master:** Transcrição de YouTube -> Posts Sociais.
+- [ ] **Briefing Matinal (07:15):** Versículo, Clima, Notícias. (removido do escopo - n8n)
+- [ ] **Insights de Conteúdo (22:00):** Ideias para produtividade e redes sociais. (removido do escopo - n8n)
+- [ ] **Hooks Master:** Transcrição de YouTube -> Posts Sociais. (removido do escopo - n8n)
 - [ ] **Vibe Coding & Voz:** Configurar comandos de voz e criação de apps.
 
 ### 🧠 Inteligência & Crescimento
