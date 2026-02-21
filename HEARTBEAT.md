@@ -1,4 +1,4 @@
-# HEARTBEAT.md - Verificações de Status do 88 v2.0
+# HEARTBEAT.md - Verificações de Status do 8 v2.1
 
 ## Verificações Periódicas (Rapel)
 
@@ -13,7 +13,7 @@
 - [ ] Status financeiro (metas vs realizado)
 
 ### Quinzenal
-- [ ] Performance Review do 88
+- [ ] Performance Review do 8
 - [ ] Revisão de shared/lessons/ por modo
 - [ ] Atualização do TASK_KANBAN.md
 

@@ -27,6 +27,6 @@
 - [ ] **Programa de Fidelização:** Estratégia de retenção e upsell na base atual.
 
 ## CONCLUÍDO (Done)
-- [x] **Boot 88 v2.0:** Sistema ativo com multi-modo (Strategist, SafeGuard, Money, Devocional, Content).
+- [x] **Boot 8 v2.0/v2.1:** Sistema ativo com multi-modo (Strategist, SafeGuard, Money, Devocional, Content).
 - [x] **Estrutura Completa:** 7 Arquivos Sagrados + shared/ + memory/ + execution/ implementados.
 - [x] **Backup GitHub + Notion:** Repositório e workspace sincronizados.

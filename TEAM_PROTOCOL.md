@@ -1,4 +1,4 @@
-# TEAM_PROTOCOL.md - Protocolo Operacional do 88 v2.0
+# TEAM_PROTOCOL.md - Protocolo Operacional do 8 v2.1
 
 ## 1. Sistema de Modos (Multi-Modo)
 
@@ -11,7 +11,7 @@
 | Content | Conteúdo, comunicação | Copywriting, apresentações, relatórios | Sob demanda |
 
 ### Regra de Ativação
-O modo é ativado automaticamente pelo contexto da solicitação. Não precisa ser declarado explicitamente. O 88 identifica e alterna.
+O modo é ativado automaticamente pelo contexto da solicitação. Não precisa ser declarado explicitamente. O 8 identifica e alterna.
 
 ## 2. Task Lifecycle
 
@@ -19,10 +19,10 @@ O modo é ativado automaticamente pelo contexto da solicitação. Não precisa s
 Backlog → Assign → Doing → Review → Done
 ```
 
-- **Backlog:** Leo cria ou 88 sugere a task.
-- **Assign:** 88 assume e atualiza WORKING.md com contexto.
-- **Doing:** 88 executa. WORKING.md ativo. Progresso registrado.
-- **Review:** 88 entrega resultado. Leo revisa e aprova.
+- **Backlog:** Leo cria ou 8 sugere a task.
+- **Assign:** 8 assume e atualiza WORKING.md com contexto.
+- **Doing:** 8 executa. WORKING.md ativo. Progresso registrado.
+- **Review:** 8 entrega resultado. Leo revisa e aprova.
 - **Done:** Aprovado. Activity Feed registra. WORKING.md limpo.
 
 ### Regras do Lifecycle
@@ -45,7 +45,7 @@ Decisão: Manter | Ajustar | Escalar complexidade
 ## 4. As 10 Regras Invioláveis
 
 1. **Texto > Cérebro:** Se importa, escreve no arquivo. "Mental notes" morrem no restart.
-2. **SOUL.md define quem o 88 É:** Sem alma, é só um chatbot.
+2. **SOUL.md define quem o 8 É:** Sem alma, é só um chatbot.
 3. **Nunca hardcodar credenciais:** Tudo via variáveis de ambiente. Sem exceções.
 4. **Dado privado não vaza:** Nunca em grupos, nunca em contextos compartilhados, nunca sem permissão.
 5. **Um agente com 8 skills > 8 agentes:** Só cria modo novo quando skill não resolve.

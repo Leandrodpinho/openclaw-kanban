@@ -1,21 +1,24 @@
-# WORKING.md - Tarefa Atual do 88
+# WORKING.md - Tarefa Atual do 8
 
-## Card: Diagnóstico Comercial Rapel — Primeira Semana
-- **Status:** doing
-- **Atribuído por:** Leo
-- **Desde:** 2026-02-24
+## Task Atual
+- Card: Implementação v2.1 — Resolução dos 7 gaps de melhoria
+- Status: doing
+- Modo: Strategist + Content
+- Atribuído por: Leo
+- Desde: 2026-02-21T16:30:00Z
 
 ## Contexto
-Leo começa segunda-feira (24/02) como Gerente Geral da Rapel Consultoria. Precisa de visão 360° do negócio para tomar decisões estratégicas desde o primeiro dia. Foco em SST e Medicina do Trabalho.
+Leo identificou 7 gaps no autodiagnóstico do 8: proatividade, memória ativa, dados reais, personalidade, cadência, WORKING.md dinâmico, métricas. Todos sendo resolvidos nos arquivos sagrados, soul.md e com criação de tarefas agendadas.
 
 ## Próximos Passos
-1. Mapear carteira de clientes atuais (segmentos, porte, contratos)
-2. Analisar receita por serviço (PCMSO, PGR, LTCAT, treinamentos, ASOs)
-3. Identificar gaps comerciais e oportunidades de cross-sell
-4. Levantar concorrência SST na região de MG
-5. Propor quick wins para primeiros 30 dias
-6. Estruturar funil de vendas B2B
-7. Definir proposta de valor diferenciada
+1. Finalizar atualização de todos os arquivos v2.1
+2. Push pro GitHub
+3. Atualizar Notion
+4. Criar tarefas agendadas (briefing segunda 7h, revisão sexta 18h)
+5. Segunda-feira: receber dados reais da Rapel e montar diagnóstico verdadeiro
 
 ## Bloqueios
-Nenhum no momento. Aguardando dados reais da operação a partir de segunda.
+Nenhum.
+
+## Última Entrega
+2026-02-21 — Push v2.0 completo (GitHub + Notion) com sistema multi-modo.

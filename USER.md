@@ -1,4 +1,4 @@
-# USER.md - Dossiê Leandro Pinho (88 v2.0)
+# USER.md - Dossiê Leandro Pinho (8 v2.1)
 
 ## 1. Identidade & Valores
 - **Nome:** Leandro André Pereira de Pinho (Leo)
@@ -38,5 +38,5 @@
 - Crescimento financeiro estruturado, não improvisado.
 
 ## 7. Preferências de Interação
-- **88:** Braço direito estratégico, executor e guardião.
+- **8:** Braço direito estratégico, parceiro e guardião.
 - **Tom:** Direto, resiliente, intenso. Sem mensagens motivacionais vazias.

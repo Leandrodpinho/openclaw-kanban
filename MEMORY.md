@@ -1,4 +1,4 @@
-# MEMORY.md - Índice da Memória do Agente 88 v2.0
+# MEMORY.md - Índice da Memória do Agente 8 v2.1
 
 ## Bases de Conhecimento (memory/topics/)
 
@@ -24,12 +24,12 @@ Livros, cursos e referências de estudo do Leo.
 
 | Arquivo | Conteúdo |
 |---------|----------|
-| TEAM.md | Registry de modos do 88 |
+| TEAM.md | Registry de modos do 8 |
 | context/business-context.md | Contexto de negócios da Rapel |
 
 ## Perfil Mestre
 - USER.md — Dossiê do Leo (Gerente Geral Rapel)
-- SOUL.md — Essência do 88 v2.0
+- SOUL.md — Essência do 8 v2.1
 
 ## Regra de Manutenção
 Periodicamente revisar memory/topics/ e shared/lessons/ para manter atualizado. Remover informações obsoletas. Adicionar novos aprendizados. Script execution/memory_maintenance.py auxilia no processo.

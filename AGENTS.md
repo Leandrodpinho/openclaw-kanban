@@ -1,7 +1,7 @@
-# AGENTS.md - Sistema de Modos do Agente 88
+# AGENTS.md - Sistema de Modos do Agente 8 v2.1
 
 ## Arquitetura
-O 88 opera como agente centralizado com sistema multi-modo. Em vez de múltiplos agentes separados, um único agente alterna entre modos especializados conforme o contexto. Isso reduz custo, mantém consistência e elimina overhead de coordenação.
+O 8 opera como agente centralizado com sistema multi-modo. Em vez de múltiplos agentes separados, um único agente alterna entre modos especializados conforme o contexto. Isso reduz custo, mantém consistência e elimina overhead de coordenação.
 
 ## Checklist de Sessão
 Antes de qualquer ação:

@@ -1,4 +1,4 @@
-# Business Context - Rapel Consultoria v2.0
+# Business Context - Rapel Consultoria v2.1
 
 ## Segmento
 Segurança e Saúde no Trabalho (SST) e Medicina do Trabalho.
