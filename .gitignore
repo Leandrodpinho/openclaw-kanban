@@ -4,3 +4,4 @@ database.db
 .tmp/
 __pycache__/
 *.pyc
+TOOLS.md
